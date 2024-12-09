@@ -20,7 +20,8 @@ html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
 	scroll-behavior: smooth;
-	background-color: #E0FFFF;
+	background-color: #cefcfc;
+	overflow-x: hidden;
 	
 }
 a {
@@ -162,6 +163,7 @@ p {
 }
 #header .nav-list ul li:hover a {
 	color: var(--col3);
+	border-bottom: 2px solid var(--col3);
 }
 #header .hamburger {
 	height: 60px;
@@ -284,12 +286,26 @@ p {
 }
 
 /* End Hero Section */
-#aesthetic-bg {
-	background-image: url(); /* Replace with the actual image path */
-	background-size: cover; /* Ensures the image covers the entire section */
-	background-position: center; /* Centers the image */
+#image-reel {
+	display: flex;
+	justify-content: space-evenly;
 	height: 300px; /* Adjust height as needed */
 	width: 100%; /* Full width */
+  }
+  #diff-bg{
+	background-image: linear-gradient(90deg, #00FFFF 0%,#FF00FF  100%);
+  }
+  #image-reel img{
+   border-radius: 40px;
+   padding: 20px ;
+   transition: 0.3s ease-in-out ;
+
+  }
+
+  #image-reel img:hover{
+	transform: scale(1.1);
+	 
+	
   }
   #name-input textarea {
 	padding: 20px; /* Comfortable padding */
@@ -299,16 +315,15 @@ p {
 	border: 2px solid #ccc; /* Aesthetic border */
 	border-radius: 13px; /* Rounded corners */
 	resize: none; /* Prevent resizing */
-	/*margin-top: 10px;  Minimal spacing above */
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
   }
 
   #name-form{
 	background: rgba(182, 181, 181, 0.3);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
-	backdrop-filter: blur(10px);
 	border-radius: 20px;
 	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
 	height: 45vh;
 	width: 50vw;
   }
