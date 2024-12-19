@@ -5,9 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+  <link rel="icon" href="/static/Image/musical-note.png" type="Image/x-icon">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Ms+Madi&family=Playwrite+IT+Moderna:wght@100..400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Merienda:wght@600&display=swap');
   </style>
   <script src="{{ url_for('static', filename='app.js') }}" defer></script>
   <title>TuneStream</title>
@@ -29,8 +31,8 @@
           </div>
           <ul>
             <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#services" data-after="Service">Services</a></li>
-            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#services" data-after="Service">Founders</a></li>
+            <li><a href="#projects" data-after="Projects">Suggestions</a></li>
             <li><a href="#about" data-after="About">About</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
@@ -71,7 +73,7 @@
       <form action="/" id="name-form" method="POST">
         <label for="user_input">Find your Tune!</label>
         <input id="user_input" name="user_input" placeholder="Who are your stars?-" required>
-        <button type="submit" class="cta" href="#projects">Submit</button>
+        <button type="submit" class="cta" href="#projects" id="subbutton" onclick="showOutput()">Tune-in!</button>
       </form>
     </div>
   </section>
@@ -88,34 +90,35 @@
       </div>
       <div class="service-bottom">
         <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <div class="icon"><img src="/static/Image/front-end.png" /></div>
+          <h2>Shubh Yadav</h2>
+          <p>A talented frontend developer, crafting seamless and interactive user interfaces. He specializes
+            in creating visually appealing 
+            and responsive web applications that enhance user experiences.</p>
         </div>
         <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <div class="icon"><img src="/static/Image/dataset.png" /></div>
+          <h2>Harshit Gupta</h2>
+          <p> A skilled dataset designer, specializing in curating and structuring high-quality datasets for AI, 
+            machine learning and data-driven applications, ensuring precision and impactful insights.</p>
         </div>
         <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <div class="icon"><img src="/static/Image/front-end.png" /></div>
+          <h2>Sagar Singh Rajput</h2>
+          <p> A skilled frontend developer, passionate about designing and implementing dynamic, user-friendly interfaces. 
+            His expertise lies in delivering responsive and intuitive digital experiences.</p>
         </div>
         <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <div class="icon"><img src="/static/Image/web-programming.png" /></div>
+          <h2>Rohan Mishra</h2>
+          <p>An experienced backend developer, focused on creating efficient, secure, and scalable backend architectures. 
+            He excels in optimizing databases and APIs to power seamless user experiences.</p>
         </div>
         <div class="service-item">
-          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
-          <h2>Web Design</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis debitis rerum, magni voluptatem sed
-            architecto placeat beatae tenetur officia quod</p>
+          <div class="icon"><img src="/static/Image/ui.png" /></div>
+          <h2>Sarvyagya Prakash</h2>
+          <p> A creative web designer, specializing in crafting visually stunning and user-friendly websites. 
+            He combines aesthetics with functionality to deliver engaging digital experiences.</p>
         </div>
       </div>
     </div>
@@ -126,7 +129,7 @@
   <section id="projects">
     <div class="projects container">
       <div class="projects-header">
-        <h1 class="section-title">Recent <span>Projects</span></h1>
+        <h1 class="section-title">Top <span>Suggestions</span></h1>
       </div>
       
             {% if output %}
@@ -136,47 +139,47 @@
       <div class="all-projects">
         <div class="project-item">
           <div class="project-info">
-            <h1>Result 1</h1>
+            <h1>Top Suggestion!</h1>
           </div>
           
           <div class="project-img">
-            <img src="/static/Image/6231281356860669277.jpg" alt="img">
+            <img src="/static/Image/yoongi aesthetic.jpeg" alt="img">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Result 2</h1>
+            <h1>Suggestion 2</h1>
             
           </div>
           <div class="project-img">
-            <img src="/static/Image/Background4.jpg" alt="img">
+            <img src="/static/Image/When all words fail, music speaks_.jpeg" alt="img">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Result 3</h1>
+            <h1>Suggestion 3</h1>
             
           </div>
           <div class="project-img">
-            <img src="/static/Image/6231281356860669279.jpg" alt="img">
+            <img src="/static/Image/Vector Vinyl.jpeg" alt="img">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Result 4</h1>
+            <h1>Suggestion 4</h1>
             
           </div>
           <div class="project-img">
-            <img src="/static/Image/6231281356860669280.jpg" alt="img">
+            <img src="/static/Image/pexels-erkan-302655.jpg" alt="img">
           </div>
         </div>
         <div class="project-item">
           <div class="project-info">
-            <h1>Result 5</h1>
+            <h1>Suggestion 5</h1>
             
           </div>
           <div class="project-img">
-            <img src="/static/Image/background2.jpg" alt="img">
+            <img src="/static/Image/my fav.jpeg" alt="img">
           </div>
         </div>
       </div>
@@ -189,18 +192,25 @@
     <div class="about container">
       <div class="col-left">
         <div class="about-img">
-          <img src="./img/img-2.png" alt="img">
+          <img src="/static/Image/1.jpg" alt="img">
         </div>
       </div>
       <div class="col-right">
-        <h1 class="section-title">About <span>me</span></h1>
-        <h2>Front End Developer</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, velit alias eius non illum beatae atque
-          repellat ratione qui veritatis repudiandae adipisci maiores. At inventore necessitatibus deserunt
-          exercitationem cumque earum omnis ipsum rem accusantium quis, quas quia, accusamus provident suscipit magni!
-          Expedita sint ad dolore, commodi labore nihil velit earum ducimus nulla quae nostrum fugit aut, deserunt
-          reprehenderit libero enim!</p>
-        <a href="#" class="cta">know more</a>
+        <h1 class="section-title">About <span>tunestream</span></h1>
+        <h2>Why TuneStream?</h2>
+        <p>At TuneStream, our mission is to redefine how the world experiences music by harnessing the 
+          power of artificial intelligence to deliver truly personalized listening journeys. 
+          We empower music lovers to discover tracks that resonate deeply with their emotions, moods, 
+          and moments, while helping artists connect with audiences who will cherish their creations.
+
+          <p>Our platform seamlessly integrates with popular music streaming services, providing an enhanced 
+          layer of discovery that adapts to every listener's unique taste. By combining cutting-edge AI 
+          with a love for music, we aim to make every playlist feel like it was crafted just for you.</p>
+          
+          <p>Whether you're exploring new genres, diving into your all-time favorites, or uncovering hidden 
+          gems, TuneStream is here to turn your musical moments into meaningful experiences. 
+          Together, we’re shaping the future of music discovery and connection, one song at a time.</p></p>
+        <a href="#" class="cta">Back to Top</a>
       </div>
     </div>
   </section>
@@ -218,15 +228,15 @@
           <div class="contact-info">
             <h1>Phone</h1>
             <h2>+91 8076490548</h2>
-            <h2>+91 7675879590</h2>
+            <h2>+91 9396249037</h2>
           </div>
         </div>
         <div class="contact-item">
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
           <div class="contact-info">
             <h1>Email</h1>
-            <h2>rohan@gmail.com</h2>
-            <h2>harshit@gmail.com</h2>
+            <h2>tunestream@gmail.com</h2>
+            <h2>tunestream@yahoo.com</h2>
           </div>
         </div>
         <div class="contact-item">
@@ -248,20 +258,7 @@
         <h1><span>T</span>une <span>S</span>tream</h1>
       </div>
       <h2>Your AI Music Companion</h2>
-      <div class="social-icon">
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png" /></a>
-        </div>
-        <div class="social-item">
-          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/behance.png" /></a>
-        </div>
-      </div>
+      
       <p></p>
     </div>
   </section>

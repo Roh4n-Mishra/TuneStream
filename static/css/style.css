@@ -19,6 +19,13 @@
 	font-style: normal;
 }
 
+.merienda {
+	font-family: "Merienda", serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+  }
+
 html {
 	font-size: 10px;
 	font-family: 'Montserrat', sans-serif;
@@ -542,6 +549,8 @@ p {
 	font-weight: 500;
 	margin-bottom: 146px;
 	margin-left: 53px;
+	font-family: Merienda;
+	text-decoration: underline;
 }
 
 #projects .project-info h2 {
@@ -560,6 +569,7 @@ p {
 
 .resPara{
 	font-size: 22px;
+	font-family: Playwrite IT Moderna;
 }
 
 
@@ -641,6 +651,7 @@ p {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 20px;
+	padding-bottom: 0px;
 }
 
 #about .col-left {
@@ -900,7 +911,7 @@ p {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid rgb(94, 11, 167);
+		border: 10px solid var(--col3);
 	}
 
 	#about .col-right {
@@ -989,7 +1000,7 @@ p {
 
 	#services .service-bottom .service-item {
 		flex-basis: 22%;
-		margin: 1.5%;
+		margin: 2.5%;
 	}
 }
 
